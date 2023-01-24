@@ -35,9 +35,12 @@ criar um arquivo .env com os paramêtros de banco de dados e URL do MONGO.
   // Exemplo: MONGO_URL=mongodb://localhost:27017
 
   JWT_SECRET_KEY=
-
-  ADM_PASSWORD='sh@r3n3rgy'
+  
 ```
+
+**Ao inicializar o back-end automaticamente é criado um usuário ADMIN com os seguintes dados:
+  ADM_USERNAME= 'desafiosharenergy'
+  ADM_PASSWORD='sh@r3n3rgy'
 
 Abrir o servidor
 
