@@ -1,0 +1,11 @@
+Dockerfile
+node_modules
+.git
+.vscode
+dist
+coverage
+
+/.git/
+/node_modules/
+/dist/
+/data/
