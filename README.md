@@ -68,10 +68,9 @@ _O gerenciador de arquivos para o front foi utilizado o NPM._
 Para inicializar o Frontend:
 
 
-
 ```shell
-  npm run dev
-  Aplicacão estará rodando em http://localhost:5173/
+  yarn install
+  Aplicacão estará rodando em http://localhost:3000/
 ```
 
 ## TESTES
