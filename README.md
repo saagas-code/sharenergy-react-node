@@ -38,9 +38,7 @@ criar um arquivo .env com os paramêtros de banco de dados e URL do MONGO.
   
 ```
 
-**Ao inicializar o back-end automaticamente é criado um usuário ADMIN com os seguintes dados:
-  ADM_USERNAME= 'desafiosharenergy'
-  ADM_PASSWORD='sh@r3n3rgy'
+
 
 Abrir o servidor
 
@@ -50,8 +48,7 @@ Abrir o servidor
   yarn start
 ```
 
-Usuário ADM:
-
+**Ao inicializar o back-end automaticamente é criado um usuário ADMIN com os seguintes dados**
 ```shell
   username/email = desafiosharenergy
   password = sh@r3n3rgy
