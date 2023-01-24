@@ -17,7 +17,7 @@ Realizar o clone do repositório e executar os seguintes comandos:
 Para inicializar o Backend:
 
 ```shell
-  cd back-end
+  cd Back-End
 ```
 
 ```shell
@@ -58,7 +58,7 @@ Com o servidor do backend funcionando, deve-se abrir um novo terminal na raiz do
 _O gerenciador de arquivos para o front foi utilizado o NPM._
 
 ```shell
-  cd front-end
+  cd Front-End
 ```
 
 ```shell
