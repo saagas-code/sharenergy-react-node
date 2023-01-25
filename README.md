@@ -1,6 +1,6 @@
-<p align="center">
-  <h1>Teste-Técnico-Sharenergy</h1>
-</p>
+
+  <h1 align="center">Teste-Técnico-Sharenergy</h1>
+
                                                                                                                  
 Projeto fullstack realizado em Node.js com NestJS, banco de dados não relacional MongoDB e React com Typescript. Projeto construido com o intuito de finalizar o desafio proposto pela SHARENERGY, onde foi desafiado fazer um dashboard Full-Stack feito em React + Node. </br>
 
