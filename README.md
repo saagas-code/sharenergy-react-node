@@ -12,12 +12,6 @@ Projeto fullstack realizado em Node.js com NestJS, banco de dados não relaciona
   </a>
 </p>
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,tailwind,nodejs,nestjs,mongodb" />
-  </a>
-</p>
-
 <h1 align="center">Tutorial para Rodar a Aplicação</h1>
 
 **Vale pontuar que o NODE deve estar instalado na máquina**
