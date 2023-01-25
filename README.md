@@ -5,12 +5,6 @@ Projeto fullstack realizado em Node.js com NestJS, banco de dados não relaciona
 
 ![](https://github.com/biixin/sharenergy-image/blob/main/20230125_085656.gif)
 
-  <h1 align="center">Teste-Técnico-Sharenergy</h1>
-
-                                                                                                                 
-Projeto fullstack realizado em Node.js com NestJS, banco de dados não relacional MongoDB e React com Typescript. Projeto construido com o intuito de finalizar o desafio proposto pela SHARENERGY, onde foi desafiado fazer um dashboard Full-Stack feito em React + Node. </br>
-
-![](https://github.com/biixin/sharenergy-image/blob/main/20230125_085656.gif)
 
 <p align="center">
   <a href="https://skillicons.dev">
