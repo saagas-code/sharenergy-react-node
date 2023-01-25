@@ -18,7 +18,7 @@ export const useEditClient = () => {
   const navigate = useNavigate()
 
   const fetchData = async () => {
-    const {data} = await axios.get(`/clients/${id}`)
+    const {data} = await axios.patch(`/clients/${id}`)
     setClientData(data)
   }
 
