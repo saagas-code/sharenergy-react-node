@@ -1,4 +1,10 @@
 
+<h1 align="center">Teste-Técnico-Sharenergy</h1>
+                             
+Projeto fullstack realizado em Node.js com NestJS, banco de dados não relacional MongoDB e React com Typescript. Projeto construido com o intuito de finalizar o desafio proposto pela SHARENERGY, onde foi desafiado fazer um dashboard Full-Stack feito em React + Node. </br>
+
+![](https://github.com/biixin/sharenergy-image/blob/main/20230125_085656.gif)
+
   <h1 align="center">Teste-Técnico-Sharenergy</h1>
 
                                                                                                                  
@@ -12,7 +18,13 @@ Projeto fullstack realizado em Node.js com NestJS, banco de dados não relaciona
   </a>
 </p>
 
-## Tutorial de como Rodar a Aplicação
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,tailwind,nodejs,nestjs,mongodb" />
+  </a>
+</p>
+
+<h1 align="center">Tutorial para Rodar a Aplicação</h1>
 
 **Vale pontuar que o NODE deve estar instalado na máquina**
 
@@ -63,14 +75,15 @@ Abrir o servidor
 ```
 
 Com o servidor do backend funcionando, deve-se abrir um novo terminal na raiz do projeto e executar os seguintes comandos, para inicializar o Front-End:
-_O gerenciador de arquivos para o front foi utilizado o NPM._
+
+_O gerenciador de arquivos para o front foi utilizado o YARN._
 
 ```shell
   cd Front-End
 ```
 
 ```shell
-  npm install --force
+  yarn install
 ```
 
 Para inicializar o Frontend:
@@ -81,27 +94,30 @@ Para inicializar o Frontend:
   Aplicacão estará rodando em http://localhost:3000/
 ```
 
-## TESTES
 
-### Testes Backend
+<h1 align="center">Testes</h1>
+
+<h2 align="center">Back-End</h3>
 
 Para o back-end foi utilizado testes unitários, ainda não esta com cobertura de 100%, porem todas as regras de negócios, casos e controller estão cobertos
 (Total de 60% da aplicacão) <br />
 
 ![](https://user-images.githubusercontent.com/113357477/213822947-906cfc79-ea9f-423d-979b-8a12d364e4e0.png)
 
-### Testes Frontend
+<h2 align="center">Front-End</h3>
 
-**EM DESENVOLVIMENTO**
+<p align="center">
+  **EM DESENVOLVIMENTO**
+</p>
 
-## Endpoints - API
 
-#toda a API foi documentada no swagger-ui, basta acessar o endpoint: /api
+<h1 align="center">Endpoints - API</h1>
+
+Toda a API foi documentada no swagger-ui, basta acessar o endpoint: /api
 
 ![](https://user-images.githubusercontent.com/113357477/213822168-75a465b1-8954-443f-8951-947279121a55.png)
 
 ## Video explicando o projeto
 https://youtu.be/Ewym-YfPT3w
-
 
 
