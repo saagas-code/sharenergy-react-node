@@ -1,4 +1,4 @@
-import { api } from "../services/api"
+import  axios  from 'axios';
 import { useMutation } from 'react-query';
 import { queryClient } from './../services/queryClient';
 
@@ -15,12 +15,12 @@ export const useUsers = () => {
 
   const fetchUsers = async (page: number, limit: number, q: string) => {
     
-    const {data} = await api.get(`/clients?page=${page}&limit=${limit}&q=${q}`, config)
+    const {data} = await axios.get(`/clients?page=${page}&limit=${limit}&q=${q}`, config)
     return data
   }
 
   const {mutate: deleteAction} = useMutation(
-    (id: string) => api.delete(`/clients/${id}`, config), {
+    (id: string) => axios.delete(`/clients/${id}`, config), {
       onSuccess: () => {
         queryClient.invalidateQueries(["clients"])
       }

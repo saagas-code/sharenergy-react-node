@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { FieldValues } from 'react-hook-form';
-import { api } from './../services/api/index';
 import { useNavigate } from 'react-router-dom';
-
+import  axios  from 'axios';
 
 
 interface AuthErrors {
@@ -21,7 +20,7 @@ export const useRegister = () => {
   const fetchData = async () => {
     setAuthErrors({})
     if (Object.keys(registerData).length > 0) {
-      await api
+      await axios
         .post("/users", registerData)
         .then((res) => {
           alert("Conta registrada com sucesso !")

@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ClientData, updateClients } from './../services/api/Clients';
 import { useParams } from 'react-router-dom';
-import { api } from '../services/api';
 import { Client } from './../interfaces/Client';
-import { apiRandom } from './../services/api/index';
+import  axios  from 'axios';
 
 interface AuthErrors {
   email?: string,
@@ -20,13 +18,13 @@ export const useEditClient = () => {
   const navigate = useNavigate()
 
   const fetchData = async () => {
-    const {data} = await api.get(`/clients/${id}`)
+    const {data} = await axios.get(`/clients/${id}`)
     setClientData(data)
   }
 
-  const editData = async (ClientData: ClientData) => {
+  const editData = async (ClientData: Partial<Client>) => {
     try {
-      const response = await updateClients(id as string, ClientData)
+      const response = await axios.post(`/clients/${id}`, ClientData)
       alert("Dados salvos com sucesso !")
       navigate("/users")
       return response

@@ -14,10 +14,6 @@ import { ClientsAdd } from './pages/ClientsAdd/index';
 import { ClientsEdit } from './pages/ClientsEdit/index';
 
 
-
-
-
-
 function App() {
   const {isLoading} = useContext(AuthContext)
 

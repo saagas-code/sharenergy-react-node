@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { FieldValues } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './../contexts/AuthProvider';
-import { api } from './../services/api/index';
 import { saveToken, saveData, removeData } from './../helpers/saveLocalStorage';
 import  axios  from 'axios';
 
@@ -25,7 +24,7 @@ export const useLogin = () => {
     setAuthError('')
 
     if (Object.keys(loginData).length > 0) {
-      await api.post("/auth/login", {email, password})
+      await axios.post("/auth/login", {email, password})
         .then(({data: {token}}) => {
           if (remember) {
             saveData(email, password)
@@ -34,6 +33,7 @@ export const useLogin = () => {
           }
 
           saveToken(token)
+          axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
           validateToken()
           navigate("/home")
         })

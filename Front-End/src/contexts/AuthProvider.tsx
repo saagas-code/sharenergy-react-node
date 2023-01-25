@@ -1,8 +1,8 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { api } from './../services/api/index';
-import { removeToken } from './../helpers/saveLocalStorage';
+import { removeToken, getLocal } from './../helpers/saveLocalStorage';
 import { useNavigate } from 'react-router-dom';
 import { User } from "../interfaces/User";
+import  axios  from 'axios';
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -24,16 +24,13 @@ export const AuthProvider = ({children}: AuthProviderProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
 
+
   const validateToken = async () => {
-    const token =  localStorage.getItem("token")
-    const config = {
-      headers: {
-        'Authorization': 'Bearer ' +token
-      }
-    }
+    const token = getLocal("token")
     
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
     setIsLoading(true)
-    await api.get("/auth/session", config)
+    await axios.get("/auth/session")
       .then(({data}) => {
         setUser(data)
         setIsLoading(false)
@@ -52,6 +49,7 @@ export const AuthProvider = ({children}: AuthProviderProps) => {
     validateToken()
   }, [])
 
+  
   return (
     <AuthContext.Provider value={{user, isLoading, validateToken, logout}}>
       {children}

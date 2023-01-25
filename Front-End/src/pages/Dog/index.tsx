@@ -1,8 +1,8 @@
 import { Layout } from "../layout";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useQuery } from "react-query";
-import { getRandomDog } from "./../../services/api/RandomDog";
 import { Loading } from "../../components/Loading";
+import { getRandomDog } from './../../services/api/index';
 
 export const Dog = () => {
   const [dog, setDog] = useState("");

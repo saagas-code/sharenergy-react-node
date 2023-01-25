@@ -2,12 +2,18 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { FieldValues } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { api } from '../services/api';
-import { config } from './../services/api/index';
+import  axios  from 'axios';
 
 interface AuthErrors {
   email?: string,
   cpf?: string
+}
+
+const token =  localStorage.getItem("token")
+const config = {
+  headers: {
+    'Authorization': 'Bearer ' +token
+  }
 }
 
 export const useAddClient = () => {
@@ -20,7 +26,8 @@ export const useAddClient = () => {
   const fetchData = async () => {
     setAuthErrors({})
     if (Object.keys(clientData).length > 0) {
-      await api.post("/clients", clientData, config)
+      console.log('token', token)
+      await axios.post("/clients", clientData)
         .then((res) => {
           alert("Cliente criado com sucesso.")
           navigate("/users")

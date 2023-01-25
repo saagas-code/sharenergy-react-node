@@ -10,7 +10,7 @@ export const ActiveLink = ({ children, link }: Props) => {
   const { pathname } = useLocation();
   let isActive = false
 
-  if(pathname === link) {
+  if(pathname.includes(link)) {
     isActive = true
   }
 

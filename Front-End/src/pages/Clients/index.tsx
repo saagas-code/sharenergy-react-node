@@ -1,15 +1,13 @@
 import { Layout } from "../layout";
 import { useEffect, useState } from "react";
-import { useMutation, useQuery } from "react-query";
-import { deleteClient, getClients } from "./../../services/api/Clients";
+import { useQuery } from "react-query";
+import { getClients } from "./../../services/api/Clients";
 import TableClients from "./../../components/Tables/Clients";
 import { InputSearch } from "../../components/FormItems/inputSearch";
 import { FieldValues, useForm } from "react-hook-form";
 import { Loading } from "../../components/Loading";
 import Pagination from "../../components/Pagination";
-import { queryClient } from "../../services/queryClient";
 import { useNavigate } from 'react-router-dom';
-import { api } from "../../services/api";
 import { useUsers } from './../../hooks/useUsers';
 
 

@@ -15,3 +15,12 @@ export interface RandomUsers {
   };
 }
 
+export interface RandomUsersAPI {
+  info: {
+    seed: string;
+    results: number;
+    page: number;
+  },
+  results: RandomUsers[]
+}
+

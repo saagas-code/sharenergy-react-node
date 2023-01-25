@@ -1,18 +1,14 @@
 import { Layout } from "../layout";
 import { useQuery } from "react-query";
-import {
-  getRandomUsers,
-  RandomUsersAPI,
-} from "../../services/api/RandomUsers";
 import { useEffect, useState } from "react";
 import TableRandomUsers from "../../components/Tables/randomUsers";
 import { InputSearch } from "../../components/FormItems/inputSearch";
 import { Loading } from "../../components/Loading/index";
 import Pagination from "../../components/Pagination";
-import { RandomUsers } from "../../interfaces/RandomUsers";
+import { RandomUsers, RandomUsersAPI } from "../../interfaces/RandomUsers";
 import { FilterRandomUsers } from "../../helpers/FilterRandomUsers";
 import { useForm, FieldValues } from 'react-hook-form';
-import dotenv from "dotenv"
+import { getRandomUsers } from "../../services/api";
 
 
 const limit = 200;

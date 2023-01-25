@@ -1,12 +1,11 @@
 import { Input } from "../../components/FormItems/input";
 import { Layout } from "../layout";
-import { useForm, FieldValues, Controller } from "react-hook-form";
+import { useForm, FieldValues } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { AddClientSchema } from "./SchemaClientAdd";
 import { useEffect } from "react";
 import { useEditClient } from "./../../hooks/useEditClient";
-import { ClientData } from "../../services/api/Clients";
-import InputMask from "react-input-mask";
+import { Client } from './../../interfaces/Client';
 
 export const ClientsEdit = () => {
   const { clientData, navigate, authErrors, setAuthErrors, editData } = useEditClient();
@@ -30,7 +29,7 @@ export const ClientsEdit = () => {
 
   const submitForm = (data: FieldValues) => {
     setAuthErrors({})
-    editData(data as ClientData)
+    editData(data as Partial<Client>)
   };
 
   return (
