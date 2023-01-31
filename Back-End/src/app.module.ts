@@ -11,13 +11,7 @@ import { UserSchema } from './mongo/schemas/user';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: async (config: ConfigService) => ({
-        uri: config.get<string>('MONGO_URL'),
-      }),
-    }),
+    MongooseModule.forRoot(process.env.MONGO_URL),
     MongooseModule.forFeature([{name: 'user', schema: UserSchema}]),
     MongooseModule.forFeature([{name: 'client', schema: ClientSchema}]),
 

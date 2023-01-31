@@ -7,13 +7,13 @@ import { UsersRepositoryMongo } from "../user/database/mongo/repositories/UsersR
 import { AuthUserUseCase } from "./useCases/authUser/AuthUserUseCase";
 import { CreateUserUseCase } from "./useCases/createUser/CreateUserUseCase";
 import { DeleteUserUseCase } from "./useCases/deleteUser/DeleteUserUseCase";
-import { FindUserUseCase } from "./useCases/findUser/findUserUseCase";
 import {ListUserUseCase} from './useCases/listUser/ListUserUseCase'
 import { UpdateUserUseCase } from "./useCases/updateUser/UpdateUserUseCase";
 import { JwtService } from "@nestjs/jwt";
 import { RequestUserUseCase } from "./useCases/requestUser/RequestUserUseCase";
 import { ClientSchema } from "src/mongo/schemas/client";
 import { UsersService } from "./seed/UserSeed";
+import { FindUserUseCase } from "./useCases/findUser/FindUserUseCase";
 
 
 @Module({

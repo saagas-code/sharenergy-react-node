@@ -7,8 +7,8 @@ import { ListUserUseCase } from './useCases/listUser/ListUserUseCase';
 import { UserDatabaseModule } from './database.module';
 import { CreateUserUseCase } from './useCases/createUser/CreateUserUseCase';
 import { CreateUserController } from './useCases/createUser/CreateUserController';
-import { FindUserController } from './useCases/findUser/findUserController';
-import { FindUserUseCase } from './useCases/findUser/findUserUseCase';
+
+
 import { DeleteUserController } from './useCases/deleteUser/DeleteUserController';
 import { DeleteUserUseCase } from './useCases/deleteUser/DeleteUserUseCase';
 import { UpdateUserUseCase } from './useCases/updateUser/UpdateUserUseCase';
@@ -18,6 +18,8 @@ import { AuthUserUseCase } from './useCases/authUser/AuthUserUseCase';
 import { JwtStrategy } from './../../common/strategy/jwt.strategy';
 import { RequestUserUseCase } from './useCases/requestUser/RequestUserUseCase';
 import { RequestUserController } from './useCases/requestUser/RequestUserController';
+import { FindUserUseCase } from './useCases/findUser/FindUserUseCase';
+import { FindUserController } from './useCases/findUser/FindUserController';
 
 
 @Module({

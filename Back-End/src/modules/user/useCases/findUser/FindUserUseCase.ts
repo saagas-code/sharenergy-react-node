@@ -1,4 +1,3 @@
-import { User } from '../../entities/User';
 import { Injectable } from '@nestjs/common';
 import { IUsersRepository } from '../../database/implements/IUsersRepository';
 import { UserNotFound } from './../../../../errors/UserNotFound';

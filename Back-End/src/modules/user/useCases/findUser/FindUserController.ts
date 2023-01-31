@@ -1,7 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { IUserViewHTTP, UserViewModel } from '../../viewsModels/ListUserView';
-import { FindUserUseCase } from './findUserUseCase';
 import { ApiTags } from '@nestjs/swagger';
+import { FindUserUseCase } from './FindUserUseCase';
 
 
 interface IPayload {
