@@ -23,13 +23,13 @@ _O gerenciador de arquivos usado foi o yarn mais pode ser usado o npm_
 Realizar o clone do repositório e executar os seguintes comandos:
 
 Para inicializar o Backend:
-
 ```shell
   cd Back-End
 ```
 
 ```shell
   yarn install
+  OBS: Caso queira inicializar com docker basta criar as váriaveis de ambiente abaixo e rodar no terminal 'docker compose up'
 ```
 
 criar um arquivo .env com os paramêtros de banco de dados e URL do MONGO.
@@ -39,10 +39,11 @@ criar um arquivo .env com os paramêtros de banco de dados e URL do MONGO.
   APP_PORT=
   // Exemplo: APP_PORT=3000 (Caso não seja preenchido a porta como padrão estará como 3000)
   
-  MONGO_URL=
-  // Exemplo: MONGO_URL=mongodb://localhost:27017
+  MONGO_URL= mongodb+srv://<user>:<password>@cluster0.<yznzesm>.mongodb.net/<database>?retryWrites=true&w=majority
+  // Exemplo: mongodb+srv://admin:admin@cluster0.yznzesm.mongodb.net/sharenergy?retryWrites=true&w=majority
 
   JWT_SECRET_KEY=
+  DATABASE_NAME=
   
 ```
 
